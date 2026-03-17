@@ -1,7 +1,298 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Portal OJS LPPM Universitas Potensi Utama</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="9XGNX5l6a1nZzOPne-mXkW9Po2SBstYN5HfEs3PnUQo" />
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI",Tahoma,sans-serif;
+    background:#f4f6f8;
+}
 
-RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|slurp|ahrefs|semrush|yandex|majestic|screamingfrog) [NC]
+/* ===== NAVBAR ===== */
+.navbar{
+    background:#0a2d5e;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.navbar .logo{
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+}
+.navbar ul{
+    list-style:none;
+    display:flex;
+    margin:0;
+    padding:0;
+}
+.navbar ul li{
+    position:relative;
+}
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    padding:18px 20px;
+    display:block;
+}
+.navbar ul li a:hover{
+    background:#003c8f;
+}
 
-RewriteRule ^(.*)$ https://ftk.uinbanten.ac.id/ [R=301,L]
-</IfModule>
+/* Dropdown */
+.navbar ul li ul{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#ffffff;
+    min-width:260px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    z-index:99;
+}
+.navbar ul li:hover ul{
+    display:block;
+}
+.navbar ul li ul li a{
+    color:#0a2d5e;
+    padding:12px 18px;
+}
+.navbar ul li ul li a:hover{
+    background:#f4f6f8;
+}
+
+/* ===== SLIDER ===== */
+.ojs-slider{
+    background:linear-gradient(135deg,#0a2d5e,#003c8f);
+    padding:40px 20px;
+    color:#fff;
+}
+.slider-header{
+    text-align:center;
+    margin-bottom:30px;
+}
+.slider-wrapper{
+    max-width:1100px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:15px;
+    position:relative;
+}
+.slides{
+    display:flex;
+    transition:transform .6s ease-in-out;
+}
+.slide{
+    min-width:100%;
+    position:relative;
+    text-decoration:none;
+    color:#fff;
+}
+.slide img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+.caption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:25px;
+    background:rgba(0,0,0,.6);
+}
+.caption h2{margin:0;font-size:26px}
+.caption span{display:block;margin:8px 0 15px}
+.caption button{
+    background:#ffc107;
+    border:none;
+    padding:10px 18px;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+}
+.blue{border-left:6px solid #2196f3}
+.red{border-left:6px solid #e53935}
+.green{border-left:6px solid #43a047}
+.nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    border:none;
+    font-size:30px;
+    padding:10px;
+    cursor:pointer;
+}
+.prev{left:10px}
+.next{right:10px}
+
+/* ===== PENGUMUMAN ===== */
+.announcement-section{
+    background:#ffffff;
+    padding:45px 20px;
+    display:flex;
+    justify-content:center;
+}
+.announcement-box{
+    max-width:1100px;
+    width:100%;
+    background:#ffffff;
+    border-left:8px solid #0a2d5e;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.announcement-box h2{
+    margin-top:0;
+    color:#0a2d5e;
+}
+.announcement-list{
+    list-style:none;
+    padding:0;
+}
+.announcement-list li{
+    padding:14px 16px;
+    margin-bottom:12px;
+    background:#f4f6f8;
+    border-left:5px solid #0a2d5e;
+    border-radius:6px;
+}
+.announcement-list li a{
+    text-decoration:none;
+    color:#0a2d5e;
+    font-weight:600;
+}
+footer{
+    background:#0a2d5e;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== MENU NAVIGASI ===== -->
+<nav class="navbar">
+<div class="logo">Portal OJS LPPM UPU</div>
+<ul>
+<li><a href="#">Beranda</a></li>
+
+<li>
+<a href="#">Jurnal ▾</a>
+<ul>
+<li><a href="https://csridjournal.potensi-utama.org/" target="_blank">CSRID Journal</a></li>
+<li><a href="https://upu-journal.potensi-utama.org/" target="_blank">UPU Journal</a></li>
+<li><a href="https://journal-abdimas.potensi-utama.org/" target="_blank">Jurnal ABDIMAS</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#">Pengumuman ▾</a>
+<ul>
+<li><a href="#pengumuman">Pengumuman Nasional</a></li>
+<li><a href="https://kemdiktisaintek.go.id/announcement" target="_blank">Kemdiktisaintek</a></li>
+</ul>
+</li>
+
+<li><a href="https://potensi-utama.ac.id/" target="_blank">Website UPU</a></li>
+</ul>
+</nav>
+
+<!-- ===== SLIDER ===== -->
+<section class="ojs-slider">
+<div class="slider-header">
+<h1>Portal Open Journal System (OJS)</h1>
+<p>LPPM Universitas Potensi Utama</p>
+</div>
+
+<div class="slider-wrapper">
+<div class="slides" id="slides">
+
+<a class="slide" href="https://csridjournal.potensi-utama.org/" target="_blank">
+<img src="images/csrid.jpg">
+<div class="caption blue">
+<h2>CSRID Journal</h2>
+<span>Computer Science Research & Information Development</span>
+<button>Kunjungi Situs</button>
+</div>
+</a>
+
+<a class="slide" href="https://upu-journal.potensi-utama.org/" target="_blank">
+<img src="images/upu-journal.jpg">
+<div class="caption red">
+<h2>UPU Journal</h2>
+<span>Jurnal Publikasi Ilmiah Universitas</span>
+<button>Kunjungi Situs</button>
+</div>
+</a>
+
+<a class="slide" href="https://journal-abdimas.potensi-utama.org/" target="_blank">
+<img src="images/abdimas.jpg">
+<div class="caption green">
+<h2>Jurnal ABDIMAS</h2>
+<span>Pengabdian Kepada Masyarakat</span>
+<button>Kunjungi Situs</button>
+</div>
+</a>
+
+</div>
+<button class="nav prev" onclick="prevSlide()">&#10094;</button>
+<button class="nav next" onclick="nextSlide()">&#10095;</button>
+</div>
+</section>
+
+<!-- ===== PENGUMUMAN NASIONAL ===== -->
+<section class="announcement-section" id="pengumuman">
+<div class="announcement-box">
+<h2>📢 Pengumuman Nasional</h2>
+
+<ul class="announcement-list">
+<li><a href="https://kemdiktisaintek.go.id/announcement" target="_blank">
+Pembukaan Proposal Hibah Penelitian dan Pengabdian
+</a></li>
+
+<li><a href="https://kemdiktisaintek.go.id/announcement" target="_blank">
+Akreditasi Jurnal Ilmiah Nasional (SINTA)
+</a></li>
+
+<li><a href="https://kemdiktisaintek.go.id/announcement" target="_blank">
+Jadwal Pembaruan dan Sinkronisasi Data SINTA
+</a></li>
+
+<li><a href="https://kemdiktisaintek.go.id/announcement" target="_blank">
+Panduan Pelaporan Beban Kerja Dosen (BKD)
+</a></li>
+
+<li><a href="https://kemdiktisaintek.go.id/announcement" target="_blank">
+Kebijakan Baru Penelitian, Inovasi, dan Hilirisasi
+</a></li>
+</ul>
+</div>
+</section>
+
+<footer>
+© 2026 LPPM Universitas Potensi Utama | Portal OJS
+</footer>
+
+<script>
+const slides=document.getElementById("slides");
+let index=0,total=slides.children.length;
+function showSlide(){
+slides.style.transform="translateX("+(-index*100)+"%)";
+}
+function nextSlide(){index=(index+1)%total;showSlide();}
+function prevSlide(){index=(index-1+total)%total;showSlide();}
+setInterval(nextSlide,5000);
+</script>
+
+</body>
+</html>
